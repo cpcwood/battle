@@ -4,15 +4,15 @@ feature "test infrastructure working" do
   scenario "display the home page with text 'Test infrastructure working'" do
     visit("/")
 
-    expect(page).to have_content "Test infrastructure working"
+    expect(page).to have_content "Player_1: Player_2:"
   end
 end
 
 feature "players fill in names" do
     scenario "2 players fill in name (form) - see names on screen" do
       visit("/")
-      fill_in :player_1, with: "Alicia"
-      fill_in :player_2, with: "Ben"
+      fill_in :player1, with: "Alicia"
+      fill_in :player2, with: "Ben"
   
       click_button "Play"
       expect(page).to have_content "Alicia"
