@@ -13,3 +13,5 @@ gem "selenium-webdriver"
 gem 'pry', '~> 0.12.2'
 gem 'rspec'
 gem 'rack'
+gem 'simplecov'
+gem 'simplecov-console'

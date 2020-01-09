@@ -1,0 +1,112 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/benauld/Projects/battle/spec/app_spec.rb": [
+        1
+      ],
+      "/Users/benauld/Projects/battle/spec/features/app_feature_spec.rb": [
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/benauld/Projects/battle/spec/features/attack_feature_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/benauld/Projects/battle/spec/features/players_feature_spec.rb": [
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/benauld/Projects/battle/spec/unit/game_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        3,
+        3,
+        3,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/benauld/Projects/battle/lib/game.rb": [
+        null,
+        null,
+        1,
+        1,
+        5,
+        5,
+        null,
+        null,
+        1,
+        19,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/benauld/Projects/battle/spec/unit/player_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1578585298
+  }
+}

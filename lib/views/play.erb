@@ -1,2 +1,7 @@
-<h1> <%= session[:player1].name %> vs. <%= session[:player2].name %> </h1>
-<h2> HP:  <%= session[:player1].hit_points%>  vs. HP: <%= session[:player2].hit_points %> </h2>
+<h1> <%= session[:game].return_player(1).name %> vs. <%= session[:game].return_player(2).name %> </h1>
+<h2> HP:  <%= session[:game].return_player(1).hit_points%>  vs. HP: <%= session[:game].return_player(2).hit_points %> </h2>
+
+<form action="/attack_player2" method="post">
+  <input type=hidden name=reduce_HP value=10>
+  <input type="submit" value="Attack">
+</form>
