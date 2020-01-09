@@ -1,3 +1,2 @@
-<%= @player1_name %> vs. <%= @player2_name %>
-
-<%= @player2_name %>: 60HP
+<h1> <%= session[:player1].name %> vs. <%= session[:player2].name %> </h1>
+<h2> HP:  <%= session[:player1].hit_points%>  vs. HP: <%= session[:player2].hit_points %> </h2>
