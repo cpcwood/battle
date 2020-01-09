@@ -1,7 +1,6 @@
-# frozen_string_literal: true
-
 require 'sinatra/base'
 require_relative 'player'
+require_relative 'game'
 
 class Battle < Sinatra::Base
   enable :sessions
@@ -12,8 +11,6 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    p "params here:"
-    p params
     session[:game] = Game.new(Player.new(params[:player1_name]), Player.new(params[:player2_name]))
     redirect '/play'
   end
@@ -23,8 +20,13 @@ class Battle < Sinatra::Base
   end
 
   post '/attack_player2' do
-    session[:game].attack_player(2, params[:reduce_HP].to_i)
+    session[:game].attack_player(params[:reduce_HP].to_i)
+    redirect '/game_over' if session[:game].game_over?
     redirect '/play'
+  end
+
+  get '/game_over' do
+    erb :end_screen
   end
 
   # start the server if ruby file executed directly
