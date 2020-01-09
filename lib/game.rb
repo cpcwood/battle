@@ -2,13 +2,12 @@
 
 class Game
   def initialize(player1, player2)
-    @player1 = player1
-    @player2 = player2
+    @players = [player1, player2]
     @player_1_turn = true
   end
 
   def return_player(player_number)
-    player_number == 1 ? @player1 : @player2
+    @players[player_number - 1]
   end
 
   def attack_player(hp)
@@ -17,15 +16,15 @@ class Game
   end
 
   def current_player
-    @player_1_turn ? @player1 : @player2
+    @player_1_turn ? @players[0] : @players[1]
   end
 
   def game_over?
-    [@player1, @player2].any?{|player| player.hit_points <= 0}
+    @players.any?{|player| player.hit_points <= 0}
   end
 
   def winner
-    [@player1, @player2].sort_by{|player| player.hit_points}[1].name
+    @players.max{|a, b| a.hit_points <=> b.hit_points}.name
   end
 
   private
@@ -35,6 +34,6 @@ class Game
   end
 
   def opponent
-    !@player_1_turn ? @player1 : @player2
+    !@player_1_turn ? @players[0] : @players[1]
   end
 end
