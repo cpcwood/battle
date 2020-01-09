@@ -21,12 +21,12 @@ feature "players fill in names" do
   end
 
 feature 'Hit point to be displayed' do
-  scenario "see player 2 hit points" do
+  scenario "see players and starting hit points" do
      visit("/")
      fill_in :player1_name, with: "Alicia"
      fill_in :player2_name, with: "Ben"
      click_button "Play"
-    expect(page).to have_content "Ben: 60/60 HP"
+    expect(page).to have_content "60"
   end
 end
 
