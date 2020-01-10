@@ -26,16 +26,9 @@ var tillPlayed = getCookie('timePlayed');
 // Checks if songs has been played before and starts at correct time if so
 function updatePlayer()
 {
-  if (tillPlayed)
-  {
-    song.play();
-    song.currentTime = tillPlayed;
-  }
-  else
-  {
-    song.play();
-    setCookie('timePlayed', "0");
-  }
+  if (tillPlayed){ song.currentTime = tillPlayed; }
+  else{ setCookie('timePlayed', "0"); }
+  song.play();
 }
 updatePlayer();
 

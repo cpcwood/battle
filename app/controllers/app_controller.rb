@@ -15,7 +15,7 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    session[:game] = Game.new(Player.new(params[:player1_name]), Player.new(params[:player2_name]))
+    session[:game] = Game.new(Player.new(name: params[:player1_name]), Player.new(name: params[:player2_name]))
     redirect '/play'
   end
 
