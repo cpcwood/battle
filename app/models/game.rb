@@ -1,4 +1,12 @@
 class Game
+  def self.create(player1, player2)
+    @@game = self.new(player1, player2)
+  end
+
+  def self.game_instance
+    @@game ||= nil
+  end
+
   def initialize(player1, player2)
     @players = [player1, player2]
     @player_1_turn = true

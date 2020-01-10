@@ -15,7 +15,7 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    session[:game] = Game.new(Player.new(name: params[:player1_name]), Player.new(name: params[:player2_name]))
+    Game.create(Player.new(name: params[:player1_name]), Player.new(name: params[:player2_name]))
     redirect '/play'
   end
 
@@ -24,13 +24,18 @@ class Battle < Sinatra::Base
   end
 
   post '/attack_player' do
-    session[:game].attack_player(params[:reduce_HP].to_i)
-    redirect '/game_over' if session[:game].game_over?
+    @game.attack_player(params[:reduce_HP].to_i)
+    redirect '/game_over' if @game.game_over?
     redirect '/play'
   end
 
   get '/game_over' do
     erb :end_screen
+  end
+
+  # before filters
+  before do
+    @game = Game.game_instance
   end
 
   # start the server if ruby file executed directly

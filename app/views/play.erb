@@ -3,10 +3,10 @@
 </head>
 <body>
 
-  <h1> <%= session[:game].return_player(1).name %> vs. <%= session[:game].return_player(2).name %> </h1>
-  <h2> HP:  <%= session[:game].return_player(1).hit_points%>  vs. HP: <%= session[:game].return_player(2).hit_points %> </h2>
+  <h1> <%= @game.return_player(1).name %> vs. <%= @game.return_player(2).name %> </h1>
+  <h2> HP:  <%= @game.return_player(1).hit_points%>  vs. HP: <%= @game.return_player(2).hit_points %> </h2>
   <br>
-  <h1> It's <%= session[:game].current_player.name %>'s Turn!!</h1>
+  <h1> It's <%= @game.current_player.name %>'s Turn!!</h1>
   <br>
   <form action="/attack_player" method="post">
     <input type=hidden name=reduce_HP value=10>
