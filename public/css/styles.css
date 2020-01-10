@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'pokefont';
+  src: url(/fonts/pokefont.ttf);
+}
+body {
+  background-color: #E2E2E2;
+  font-family: 'pokefont';
+  color: #323232;
+}

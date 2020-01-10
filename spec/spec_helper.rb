@@ -1,14 +1,22 @@
-
-require 'capybara'
-require 'capybara/rspec'
 require 'rspec'
+
+#set up environment
 ENV['RACK_ENV'] = 'test'
-#require File.join(File.dirname(__FILE__),'..','app.rb')
-require 'app.rb'
+$LOAD_PATH << './lib'
+$LOAD_PATH << './app/controllers'
+$LOAD_PATH << './app/models'
+
+#add capybara setup
+require 'capybara/rspec'
+require 'capybara'
+require 'capybara/dsl'
+require 'app_controller'
 require 'web_helpers'
+Capybara.app = Battle
+
+#add simple cov setup to rspec setup file=>>
 require 'simplecov'
 require 'simplecov-console'
-Capybara.app = Battle
 
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([SimpleCov::Formatter::Console])

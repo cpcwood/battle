@@ -1,0 +1,23 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+  <h1> <%= session[:game].return_player(1).name %> vs. <%= session[:game].return_player(2).name %> </h1>
+  <h2> HP:  <%= session[:game].return_player(1).hit_points%>  vs. HP: <%= session[:game].return_player(2).hit_points %> </h2>
+  <br>
+  <h1> It's <%= session[:game].current_player.name %>'s Turn!!</h1>
+  <br>
+  <form action="/attack_player" method="post">
+    <input type=hidden name=reduce_HP value=10>
+    <input type="submit" value="Attack">
+  </form>
+  <br>
+  <br>
+
+  <!-- Battletune player -->
+  <audio loop src="media/battle_tune.mp3"></audio>
+  <script src="media/audio.js"></script>
+  <!-- Battletune player -->
+
+</body>

@@ -1,19 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/cpcwood/OneDrive/Documents/Coding/Projects/battle/spec/app_spec.rb": [
-        1
-      ],
-      "/Users/cpcwood/OneDrive/Documents/Coding/Projects/battle/spec/features/app_feature_spec.rb": [
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
       "/Users/cpcwood/OneDrive/Documents/Coding/Projects/battle/spec/features/attack_feature_spec.rb": [
         1,
         1,
@@ -27,27 +14,41 @@
         1,
         1,
         1,
-        12,
+        20,
         1,
         null,
         1,
         1,
-        12,
+        20,
+        1,
+        null,
+        1,
+        1,
+        20,
+        1,
         1,
         null,
         null
       ],
-      "/Users/cpcwood/OneDrive/Documents/Coding/Projects/battle/spec/features/players_feature_spec.rb": [
+      "/Users/cpcwood/OneDrive/Documents/Coding/Projects/battle/spec/features/homepage_spec.rb": [
+        1,
+        1,
+        1,
+        1,
         null,
         1,
         1,
         1,
+        null,
+        null
+      ],
+      "/Users/cpcwood/OneDrive/Documents/Coding/Projects/battle/spec/features/player_stats_spec.rb": [
+        1,
+        1,
+        1,
         1,
         1,
         null,
-        null,
-        null,
-        1,
         1,
         1,
         1,
@@ -81,21 +82,24 @@
         1,
         null,
         null,
-        1,
-        1,
-        1,
-        1,
         null,
         1,
         1,
         1,
         1,
         null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null,
         1,
         1,
         1,
         1,
+        null,
         null,
         null,
         1,
@@ -109,6 +113,8 @@
         1,
         null,
         1,
+        1,
+        null,
         1,
         1,
         1,
@@ -132,6 +138,6 @@
         null
       ]
     },
-    "timestamp": 1578591281
+    "timestamp": 1578670276
   }
 }
